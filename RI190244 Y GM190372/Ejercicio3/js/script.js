@@ -17,9 +17,11 @@ function CrearFuncion(){
     var potencia = new Potencia(baseInput,exponenteInput);
     potencia.ImprimirCalculo();
     var retorno = potencia.Retornar();
+    document.getElementById("tabla").innerHTML += "<div class='mt-4 mb-4'>";
     for (let i = 0; i < retorno.length; i++) {
         document.getElementById("tabla").innerHTML += "<div>" + ((i==0)?"base: ":(i==1)?"exponente: ":"Resultado: ") + retorno[i]+"</div>";      
     }
+    document.getElementById("tabla").innerHTML += "<div/>";
 }
 
 
