@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center">Triángulos</h2>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="lado1">Lado 1:</label>
+                <input name="lado1" type="number" class="form-control" id="lado1">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="lado2">Lado 2:</label>
+                <input name="lado2" type="number" class="form-control" id="lado2">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="lado3">Lado 3:</label>
+                <input name="lado3" type="number" class="form-control" id="lado3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <input class="btn btn-dark text-center" type="button" id="agregar" value="Agregar" onclick="nuevoTriangulo()">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3 class="text-center">Resultados</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label for="equilatero">Equilátero:</label>
+                <input disabled name="equilatero" type="number" class="form-control" id="equilatero">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="isosceles">Isósceles:</label>
+                <input disabled name="isosceles" type="number" class="form-control" id="isosceles">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="escaleno">Escaleno:</label>
+                <input disabled name="escaleno" type="number" class="form-control" id="escaleno">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="tipo">Tipo:</label>
+                <input disabled name="tipo" type="text" class="form-control" id="tipo">
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-bordered text-center table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Lado 1</th>
+                        <th scope="col">Lado 2</th>
+                        <th scope="col">Lado 3</th>
+                        <th scope="col">Tipo</th>
+                    </tr>
+                </thead>
+                <tbody id="filas">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
