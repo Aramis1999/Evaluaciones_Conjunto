@@ -3,12 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Ejercicio 2</title>
 </head>
 <body>
+    <nav class="center text-center mt-4 mb-4">
+        <h2>Compra de gasolina</h2>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card m-auto" style="width: 60rem;">
+                <div class="card-body">
+                 <div class="row m-4">
+                     <div class="col-6">
+                        <h4 class="text-muted mb-4">Tipo de combustible</h4>
+                        <div class="display-ib mr-4">
+                            <label>
+                                <input name="group1" type="radio" id="regular" onclick="tipoGasolina()" value="3.05"/>
+                                <span>regular</span>
+                              </label>
+                        </div>
+                        <div class="display-ib mr-4">
+                            <label>
+                                <input name="group1" type="radio" id="especial" onclick="tipoGasolina()" value="3.27"/>
+                                <span>especial</span>
+                              </label>
+                        </div>
+                        <div class="display-ib mr-4">
+                            <label>
+                                <input name="group1" type="radio" id="diesel" onclick="tipoGasolina()" value="2.96"/>
+                                <span>diesel</span>
+                              </label>
+                        </div>
+                        <!--GALONES-->
+                        <h4 class="text-muted mt-5">Galones a adquirir</h4>
+                        <div class="col-6 center text-center">
+                        <label>Min 0.5 - Max 150</label>
+                            <input type="number" class="form-control" onchange="galonesAdquiridos()" id="galones" min="0.50" max="150.00" step="0.05" placeholder="0.05 Min">
+                        </div>
+                     </div>
+                     <div class="col-6">
+                        <h4 class="text-muted text-center mb-4">Facturación</h4>
+                        <table class="table table-striped">
+                            <thead>
+                              <tr class="bg-success">
+                                <th scope="col" class="text-white">Tipo</th>
+                                <th scope="col" class="text-white">Monto a pagar</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>dolares:</th>
+                                <td><span id=idmonto></span></td>
+                              </tr>
+                              <tr>
+                                <th>Tipo de gasolina:</th>
+                                <td><span id=idTgasolina></span></td>
+                              </tr>
+                              <tr>
+                                <th>Galones:</th>
+                                <td><span id=idgasolina></span></td>
+                              </tr>
+                    
+                            </tbody>
+                          </table>
+                     </div>
+                 </div>
+                </div>
+              </div>
+        </div>
+    </div>
     
-    <script src="script.js"></script>
+      
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
